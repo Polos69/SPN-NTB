@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.HashMap;
 
+import spn.ntb.mfrcrew.MainUbahPassword;
 import spn.ntb.mfrcrew.R;
 import spn.ntb.mfrcrew.json.SessionManager;
 
@@ -104,9 +105,9 @@ public void btn_privacy(View view) {
 
 public void btn_ganti_pass(View view) {
 	view.startAnimation(animAlpha);
-	//Intent i = new Intent(getApplicationContext(), MainGantiPass.class);
-	//finish();
-	//startActivity(i);
+	Intent i = new Intent(getApplicationContext(), MainUbahPassword.class);
+	finish();
+	startActivity(i);
 }
 
 public void apk_lainnya(View view) {
@@ -126,7 +127,7 @@ public void btn_home(View view) {
 }
 
 public void onBackPressed() {
-	Intent i = new Intent(getApplicationContext(), Main_Dashboard.class);
+	Intent i = new Intent(getApplicationContext(), Siswa_Profile.class);
 	finish();
 	startActivity(i);
 }
