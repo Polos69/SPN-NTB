@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SiswaLibrary_Detail">
+
+    <LinearLayout
+        android:id="@+id/toph"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#f2f2f2"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:onClick="tulak"
+            android:src="@drawable/btn_back"
+            app:tint="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:text="Detail Materi"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="#000000"
+            android:textSize="10pt"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toph"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UnknownId">
+
+        <TextView
+            android:id="@+id/nm_gambar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_centerInParent = "true"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>

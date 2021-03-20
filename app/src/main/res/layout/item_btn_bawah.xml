@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/linbot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#f2f2f2"
+        android:paddingBottom="5dp"
+        android:paddingTop="8dp"
+        tools:ignore="MissingConstraints">
+
+        <FrameLayout
+            android:id="@+id/btn_home"
+            android:layout_width="40dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/btn_bwh_home"
+                app:tint="#39c0ba" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_setting"
+            android:layout_width="40dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="2dp"
+                app:srcCompat="@drawable/btn_bwh_setting"
+                app:tint="#323232" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_notif"
+            android:layout_width="40dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:id="@+id/btn_wa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/btn_bwh_notif"
+                app:tint="#323232" />
+
+            <TextView
+                android:id="@+id/item_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_bulat"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="0"
+                android:textColor="@color/red" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

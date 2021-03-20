@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#296DC1</item>
+        <item name="colorPrimaryDark">#245FA6</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--EditText hint color-->
+        <item name="android:textColorHint">@color/white</item>
+        <!-- TextInputLayout text color-->
+        <item name="colorControlActivated">@color/white</item>
+        <!-- EditText line color when EditText on-focus-->
+        <item name="colorControlHighlight">@color/white</item>
+        <!-- EditText line color when EditText  in un-focus-->
+        <item name="colorControlNormal">@color/white</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/white</item>
+
+    </style>
+
+</resources>
