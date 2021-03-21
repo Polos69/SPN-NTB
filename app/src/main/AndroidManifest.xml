@@ -16,19 +16,21 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:node="replace">
-        <activity android:name=".EmptyState"></activity>
-        <activity android:name=".MainJadwalDetail" />
-        <activity
-            android:name=".MainHasilUjian"
+        <activity android:name=".EmptyState"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".MainJadwalDetail"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".MainUjianHidup"
+            android:name=".MainPreUjianHasil"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".MainSiapUjian"
+            android:name=".MainPreUjianLanjutan"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".MainJadwalSementara"
+            android:name=".MainPreUjian"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MainJadwal"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainStandar"
@@ -48,18 +50,18 @@
         <activity
             android:name=".MainGaleri"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
+        <!--<activity
             android:name=".MainInfoSPN"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />-->
         <activity
             android:name=".ui_siswa.Siswa_List_ujian"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui_siswa.SiswaLibrary"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
+        <!--<activity
             android:name=".ui_siswa.Main_ItemBawah"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />-->
         <activity
             android:name=".ui_siswa.Main_Dashboard"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
