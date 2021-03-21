@@ -84,7 +84,6 @@ protected void onCreate(Bundle savedInstanceState) {
 	animAlpha = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_hilang);
 	session = new SessionManager(getApplicationContext());
 	
-	
 	listSoal = new ArrayList<Soal>();
 	imageLoader = new ImageLoader(getApplicationContext());
 	img = (ImageView) findViewById(R.id.imageView1);

@@ -577,18 +577,18 @@
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/placeholder" />
 
-                <TextView
-                    android:id="@+id/textViewSoal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_below="@+id/textViewNo"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/montserrat_regular"
-                    android:text="Soal"
-                    android:justificationMode="inter_word"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            <TextView
+                android:id="@+id/textViewSoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewNo"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:justificationMode="inter_word"
+                android:text="Soal"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
 
                 <RadioGroup
                     android:layout_marginBottom="20dp"
