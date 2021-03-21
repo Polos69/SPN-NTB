@@ -367,10 +367,4 @@ class SimpanKritikSaran extends AsyncTask<String, String, String> {
 		Toast.makeText(getApplicationContext(), "Terimakasih Atas Kritik, Saran dan Masukkan Anda", Toast.LENGTH_SHORT).show();
 	}
 }
-
-public void btn_info(View view) {
-	view.startAnimation(animAlpha);
-	Intent i = new Intent(getApplicationContext(), MainInfoSPN.class);
-	startActivity(i);
-}
 }

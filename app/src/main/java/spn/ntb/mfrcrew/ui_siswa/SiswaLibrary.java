@@ -1,7 +1,5 @@
 package spn.ntb.mfrcrew.ui_siswa;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,8 +7,6 @@ import android.view.Menu;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.AdapterView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import android.widget.AdapterView;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,11 +27,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import spn.ntb.mfrcrew.MainHasilUjian;
-import spn.ntb.mfrcrew.MainProfil;
 import spn.ntb.mfrcrew.R;
 import spn.ntb.mfrcrew.array_adapterlist.AdapterList;
-import spn.ntb.mfrcrew.json.SessionManager;
 
 public class SiswaLibrary extends AppCompatActivity {
 

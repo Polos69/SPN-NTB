@@ -16,4 +16,54 @@
         <item>Siswa</item>
         <item>Personil POLRI</item>
     </string-array>
+
+    <string-array name="minggu">
+        <item>Minggu 1</item>
+        <item>Minggu 2</item>
+        <item>Minggu 3</item>
+        <item>Minggu 4</item>
+        <item>Minggu 5</item>
+        <item>Minggu 6</item>
+        <item>Minggu 7</item>
+        <item>Minggu 8</item>
+        <item>Minggu 9</item>
+        <item>Minggu 10</item>
+        <item>Minggu 11</item>
+        <item>Minggu 12</item>
+        <item>Minggu 13</item>
+        <item>Minggu 14</item>
+        <item>Minggu 15</item>
+        <item>Minggu 16</item>
+        <item>Minggu 17</item>
+        <item>Minggu 18</item>
+        <item>Minggu 19</item>
+        <item>Minggu 20</item>
+        <item>Minggu 21</item>
+        <item>Minggu 22</item>
+        <item>Minggu 23</item>
+        <item>Minggu 24</item>
+        <item>Minggu 25</item>
+        <item>Minggu 26</item>
+        <item>Minggu 27</item>
+        <item>Minggu 28</item>
+        <item>Minggu 29</item>
+        <item>Minggu 30</item>
+    </string-array>
+
+    <string-array name="bulan">
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
+
+
 </resources>

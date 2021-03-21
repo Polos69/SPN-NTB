@@ -221,7 +221,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 
 
-private void showInputUser() {
+/*private void showInputUser() {
 	LayoutInflater mInflater = LayoutInflater.from(this);
 	View v = mInflater.inflate(R.layout.item_ujian_biodata, null);
 	final AlertDialog dialog = new AlertDialog.Builder(this).create();
@@ -246,7 +246,7 @@ private void showInputUser() {
 	});
 	
 	dialog.show();
-}
+}*/
 
 private class GetSoal extends AsyncTask<Void, Void, Void> {
 	@Override

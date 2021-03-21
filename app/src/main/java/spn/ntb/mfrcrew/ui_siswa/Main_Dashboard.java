@@ -24,7 +24,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -34,13 +33,12 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
+import spn.ntb.mfrcrew.EmptyState;
 import spn.ntb.mfrcrew.MainGaleri;
-import spn.ntb.mfrcrew.MainHasilUjian;
-import spn.ntb.mfrcrew.MainHome;
-import spn.ntb.mfrcrew.MainJadwalSementara;
+import spn.ntb.mfrcrew.MainJadwal;
 import spn.ntb.mfrcrew.MainProfil;
 import spn.ntb.mfrcrew.MainSejarah;
-import spn.ntb.mfrcrew.MainSiapUjian;
+import spn.ntb.mfrcrew.MainPreUjian;
 import spn.ntb.mfrcrew.MainStandar;
 import spn.ntb.mfrcrew.MainVisi;
 import spn.ntb.mfrcrew.R;
@@ -157,30 +155,10 @@ private void DialogForm() {
 
 public void btn_jadwal(View view) {
 	view.startAnimation(animAlpha);
-	//DialogForm3();
-	Intent i = new Intent(getApplicationContext(), MainJadwalSementara.class);
+	Intent i = new Intent(getApplicationContext(), MainJadwal.class);
 	startActivity(i);
 }
 
-private void DialogForm3() {
-	AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-	
-	alertDialogBuilder.setTitle("INFO JADWAL");
-	
-	// set pesan dari dialog
-	alertDialogBuilder
-			  .setMessage("Jadwal Belum Ada")
-			  .setIcon(R.drawable.app_icon)
-			  .setCancelable(false)
-			  .setPositiveButton("OK",new DialogInterface.OnClickListener() {
-				  public void onClick(DialogInterface dialog,int id) {
-					  dialog.cancel();
-				  }
-			  });
-	
-	AlertDialog alertDialog = alertDialogBuilder.create();
-	alertDialog.show();
-}
 
 public void btn_standar(View view) {
 	view.startAnimation(animAlpha);
@@ -188,6 +166,11 @@ public void btn_standar(View view) {
 	startActivity(i);
 }
 
+public void btn_pengumuman(View view) {
+	view.startAnimation(animAlpha);
+	Intent i = new Intent(getApplicationContext(), EmptyState.class);
+	startActivity(i);
+}
 
 class SimpanKritikSaran extends AsyncTask<String, String, String> {
 	
@@ -235,30 +218,8 @@ class SimpanKritikSaran extends AsyncTask<String, String, String> {
 
 public void btn_ujian(View view) {
 	view.startAnimation(animAlpha);
-	Intent i = new Intent(getApplicationContext(), MainSiapUjian.class);
+	Intent i = new Intent(getApplicationContext(), MainPreUjian.class);
 	startActivity(i);
-}
-
-
-private void DialogForm2() {
-	AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-	
-	alertDialogBuilder.setTitle("INFO UJIAN");
-	
-	// set pesan dari dialog
-	alertDialogBuilder
-			  .setMessage("Ujian Belum di Mulai")
-			  .setIcon(R.drawable.app_icon)
-			  .setCancelable(false)
-			  
-			  .setNegativeButton("OK",new DialogInterface.OnClickListener() {
-				  public void onClick(DialogInterface dialog, int id) {
-					  dialog.cancel();
-				  }
-			  });
-	
-	AlertDialog alertDialog = alertDialogBuilder.create();
-	alertDialog.show();
 }
 
 public void btn_setting(View view) {
@@ -315,12 +276,13 @@ public void onBackPressed() {
 		  .setMessage("Apakah anda yakin keluar aplikasi?")
 		  .setIcon(R.drawable.app_icon)
 		  .setCancelable(false)
-		  .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+		  .setNegativeButton("Tidak", null)
+		  .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
 			  public void onClick(DialogInterface dialog, int id) {
 				  finish();
 			  }
 		  })
-		  .setNegativeButton("No", null)
+		  
 		  .show();
 }
 

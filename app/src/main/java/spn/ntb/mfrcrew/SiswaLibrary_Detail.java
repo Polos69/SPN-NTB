@@ -42,7 +42,6 @@ public class SiswaLibrary_Detail extends AppCompatActivity {
     private static final String url_pdf = "http://spn.ntb.polri.go.id/admin/service_android/detail_library.php";
     JSONArray string_json = null;
     
-    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

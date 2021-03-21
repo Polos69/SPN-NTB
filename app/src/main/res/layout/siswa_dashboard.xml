@@ -472,29 +472,6 @@
                                 android:layout_weight="1"
                                 android:orientation="vertical">
 
-                                <ImageButton
-                                    android:id="@+id/imageButton4"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_gravity="center"
-                                    android:background="@drawable/shape_login"
-                                    android:elevation="5dp"
-                                    android:visibility="invisible"
-                                    android:backgroundTint="@color/white"
-                                    android:scaleType="centerInside"
-                                    android:src="@drawable/menu_3" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="3dp"
-                                    android:gravity="center"
-                                    android:text=""
-                                    android:fontFamily="@font/montserrat_regular"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp" />
-
                             </LinearLayout>
 
                             <LinearLayout
@@ -503,29 +480,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-
-                                <ImageButton
-                                    android:id="@+id/imageButton5"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_gravity="center"
-                                    android:background="@drawable/shape_login"
-                                    android:visibility="invisible"
-                                    android:elevation="5dp"
-                                    android:backgroundTint="@color/white"
-                                    android:scaleType="centerInside"
-                                    android:src="@drawable/menu_3" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="3dp"
-                                    android:gravity="center"
-                                    android:text=""
-                                    android:fontFamily="@font/montserrat_regular"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp" />
 
                             </LinearLayout>
                         </LinearLayout>
@@ -762,6 +716,7 @@
             android:layout_width="40dp"
             android:layout_weight="1"
             android:padding="2dp"
+            android:onClick="btn_pengumuman"
             android:layout_height="wrap_content">
 
             <LinearLayout
