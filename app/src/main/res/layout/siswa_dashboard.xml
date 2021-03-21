@@ -392,7 +392,7 @@
                                     android:elevation="10dp"
                                     android:background="#75FAFAFA"
                                     android:scaleType="centerCrop"
-                                    android:onClick="btn_galeri"
+                                    android:onClick="btn_galeri2"
                                     android:src="@drawable/visualisasi" />
 
                                 <TextView

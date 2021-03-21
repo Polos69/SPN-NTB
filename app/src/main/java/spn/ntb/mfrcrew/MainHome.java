@@ -325,6 +325,9 @@ private void DialogForm() {
 	dialog.show();
 }
 
+public void btn_galeri(View view) {
+}
+
 class SimpanKritikSaran extends AsyncTask<String, String, String> {
 	
 	@Override

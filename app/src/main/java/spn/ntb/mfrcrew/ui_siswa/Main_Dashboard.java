@@ -172,6 +172,12 @@ public void btn_pengumuman(View view) {
 	startActivity(i);
 }
 
+public void btn_galeri2(View view) {
+	view.startAnimation(animAlpha);
+	Intent i = new Intent(getApplicationContext(), MainGaleri.class);
+	startActivity(i);
+}
+
 class SimpanKritikSaran extends AsyncTask<String, String, String> {
 	
 	@Override
@@ -259,12 +265,6 @@ public void btn_sejarah(View view) {
 public void btn_visi_misi(View view) {
 	view.startAnimation(animAlpha);
 	Intent i = new Intent(getApplicationContext(), MainVisi.class);
-	startActivity(i);
-}
-
-public void btn_galeri(View view) {
-	view.startAnimation(animAlpha);
-	Intent i = new Intent(getApplicationContext(), MainGaleri.class);
 	startActivity(i);
 }
 

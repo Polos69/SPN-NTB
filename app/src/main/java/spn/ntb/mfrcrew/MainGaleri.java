@@ -32,7 +32,7 @@ public class MainGaleri extends AppCompatActivity {
 	JSONParser jParser = new JSONParser();
 	ArrayList<HashMap<String, String>> DaftarElektronik = new ArrayList<HashMap<String, String>>();
 	private static String url_galeri = "http://spn.ntb.polri.go.id/admin/service_android/galeri.php";
-	public static final String TAG_GAMBAR = "gambar_nama";
+	public static final String TAG_GAMBAR = "gambar";
 	
 	JSONArray string_json = null;
 	GridView list;
