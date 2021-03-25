@@ -65,7 +65,7 @@ class AmbilData extends AsyncTask<String, String, String> {
 	protected void onPreExecute(){
 		super.onPreExecute();
 		pDialog = new ProgressDialog(MainGaleri.this);
-		pDialog.setMessage("Login...");
+		pDialog.setMessage("Loading...");
 		pDialog.setIndeterminate(false);
 		pDialog.setCancelable(true);
 		pDialog.show();

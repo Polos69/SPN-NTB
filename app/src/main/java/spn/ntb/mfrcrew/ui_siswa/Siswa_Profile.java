@@ -17,6 +17,7 @@ import java.util.HashMap;
 
 import spn.ntb.mfrcrew.MainUbahPassword;
 import spn.ntb.mfrcrew.R;
+import spn.ntb.mfrcrew.Siswa_Detail_Profil;
 import spn.ntb.mfrcrew.json.SessionManager;
 
 public class Siswa_Profile extends AppCompatActivity {
@@ -86,6 +87,9 @@ private void showDialog(){
 
 public void btn_edit(View view) {
 	view.startAnimation(animAlpha);
+	Intent i = new Intent(getApplicationContext(), Siswa_Detail_Profil.class);
+	finish();
+	startActivity(i);
 }
 
 public void beri_ratting(View view) {
@@ -97,7 +101,7 @@ public void beri_ratting(View view) {
 	startActivity(intent);*/
 }
 
-public void btn_privacy(View view) {
+public void btn_web(View view) {
 	view.startAnimation(animAlpha);
 	//Intent i = new Intent(getApplicationContext(), MainPrivacyPolice.class);
 	//startActivity(i);
@@ -127,7 +131,7 @@ public void btn_home(View view) {
 }
 
 public void onBackPressed() {
-	Intent i = new Intent(getApplicationContext(), Siswa_Profile.class);
+	Intent i = new Intent(getApplicationContext(), Main_Dashboard.class);
 	finish();
 	startActivity(i);
 }

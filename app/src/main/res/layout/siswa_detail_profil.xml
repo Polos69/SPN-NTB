@@ -370,7 +370,7 @@
             android:layout_marginRight="25dp"
             android:layout_marginBottom="18dp"
             app:cardCornerRadius="10dp"
-            android:onClick="onClick"
+            android:onClick="btn_ubah"
             android:elevation="5dp"
             android:layout_height="wrap_content" >
 

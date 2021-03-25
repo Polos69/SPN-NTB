@@ -16,11 +16,23 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:node="replace">
-        <activity android:name=".MainAksesMateri"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".EmptyState"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".MainJadwalDetail"
+        <activity android:name=".Siswa_Ubah_Profil">
+        </activity>
+        <activity android:name=".Siswa_Detail_Profil"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".MainNotifikasi"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".MainUbahPassword" />
+        <activity
+            android:name=".MainAksesMateri"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".EmptyState"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MainJadwalDetail"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainPreUjianHasil"
@@ -52,18 +64,22 @@
         <activity
             android:name=".MainGaleri"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <!--<activity
+        <!--
+<activity
             android:name=".MainInfoSPN"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />-->
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        -->
         <activity
             android:name=".ui_siswa.Siswa_List_ujian"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui_siswa.SiswaLibrary"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <!--<activity
+        <!--
+<activity
             android:name=".ui_siswa.Main_ItemBawah"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />-->
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        -->
         <activity
             android:name=".ui_siswa.Main_Dashboard"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -100,13 +116,13 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
     </application>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>

@@ -235,12 +235,12 @@ public void btn_setting(View view) {
 	startActivity(i);
 }
 
-public void btn_home(View view) {
-	view.startAnimation(animAlpha);
-	Intent i = new Intent(getApplicationContext(), Main_Dashboard.class);
-	finish();
-	startActivity(i);
-}
+//public void btn_home(View view) {
+	//view.startAnimation(animAlpha);
+	//Intent i = new Intent(getApplicationContext(), Main_Dashboard.class);
+	//finish();
+	//startActivity(i);
+//}
 
 public void btn_library(View view) {
 	view.startAnimation(animAlpha);

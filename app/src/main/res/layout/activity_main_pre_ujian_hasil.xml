@@ -138,12 +138,12 @@
 
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/montserrat_bold"
+                                android:layout_height="19dp"
                                 android:layout_gravity="center"
-                                android:textColor="@color/white"
+                                android:fontFamily="@font/montserrat_bold"
                                 android:text="50"
                                 android:textAlignment="center"
+                                android:textColor="@color/white"
                                 android:textSize="10pt" />
                         </LinearLayout>
 

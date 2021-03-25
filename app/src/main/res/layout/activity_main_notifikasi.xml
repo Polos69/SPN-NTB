@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainSejarah">
+    tools:context=".MainNotifikasi">
 
     <LinearLayout
         android:id="@+id/toph"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
-            android:text="Sejarah SPN NTB"
+            android:text="Notifikasi"
             android:fontFamily="@font/montserrat_bold"
             android:textColor="#000000"
             android:textSize="10pt"
@@ -45,34 +45,112 @@
             android:text="Home"
             android:visibility="gone"
             android:textStyle="bold" />
+
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_below="@+id/toph"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:ignore="UnknownId">
+        android:layout_below="@id/toph"
+        android:layout_above="@id/linbot">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-                android:id="@+id/swipeRefresh"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <WebView
-                    android:id="@+id/webView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                </WebView>
-            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-        </LinearLayout>
-    </LinearLayout>
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
-    <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:paddingLeft="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/item_notif_ico"
+                                android:layout_gravity="center_horizontal"/>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:paddingTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Ujian KUHP akan dimulai pukul 08.00 WITA."
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="06.00 AM" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:paddingRight="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Buka Ujian"
+                                android:textColor="@color/black"
+                                android:gravity="center_vertical" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
     <LinearLayout
         android:id="@+id/linbot"
         android:layout_width="match_parent"
@@ -89,6 +167,7 @@
             android:layout_width="40dp"
             android:layout_weight="1"
             android:padding="2dp"
+            android:onClick="btn_home"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -115,6 +194,7 @@
             android:layout_width="40dp"
             android:layout_weight="1"
             android:padding="2dp"
+            android:onClick="btn_setting"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -146,6 +226,7 @@
             android:layout_width="40dp"
             android:layout_weight="1"
             android:padding="2dp"
+            android:onClick="btn_pengumuman"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -182,5 +263,5 @@
 
         </FrameLayout>
     </LinearLayout>
-    -->
+
 </RelativeLayout>
