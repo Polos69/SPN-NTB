@@ -31,8 +31,8 @@ public class MainGaleri extends AppCompatActivity {
 	private ProgressDialog pDialog;
 	JSONParser jParser = new JSONParser();
 	ArrayList<HashMap<String, String>> DaftarElektronik = new ArrayList<HashMap<String, String>>();
-	private static String url_galeri = "http://spn.ntb.polri.go.id/admin/service_android/galeri.php";
-	public static final String TAG_GAMBAR = "gambar";
+	private static String url_galeri = "https://spn.ntb.polri.go.id/admin/service_android/galeri.php";
+	public static final String TAG_GAMBAR = "gambar_nama";
 	
 	JSONArray string_json = null;
 	GridView list;

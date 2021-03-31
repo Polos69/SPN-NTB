@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -75,9 +76,13 @@ public void onClick(View view) {
 }
 
 public void forgot_password(View view) {
+	view.startAnimation(animAlpha);
+	Toast.makeText(getApplicationContext(), "Maaf Anda Tidak Memiliki Akses", Toast.LENGTH_SHORT).show();
 }
 
 public void privacy_police(View view) {
+	view.startAnimation(animAlpha);
+	Toast.makeText(getApplicationContext(), "Fitur Belum Tersedia", Toast.LENGTH_SHORT).show();
 }
 
 class AttempLogin extends AsyncTask<String, String, String> {
@@ -112,7 +117,7 @@ class AttempLogin extends AsyncTask<String, String, String> {
 				session.createSession4(json.getString("email_user"));
 				session.createSession5(json.getString("alamat_user"));
 				session.createSession6(json.getString("akses_user"));
-				
+				session.createSession7(json.getString("foto_user"));
 				Intent in = new Intent(getApplicationContext(), Main_Dashboard.class);
 				finish();
 				startActivity(in);
@@ -134,6 +139,16 @@ class AttempLogin extends AsyncTask<String, String, String> {
 			Toast.makeText(MainLogin.this, file_url, Toast.LENGTH_LONG).show();
 		}
 	}
+}
+
+public void onBackPressed() {
+	Intent i = new Intent(getApplicationContext(), MainHome.class);
+	finish();
+	startActivity(i);
+}
+@Override public boolean onCreateOptionsMenu(Menu menu) {
+	// Inflate the menu; this adds items to the action bar if it is present. getMenuInflater().inflate(R.menu.menu_main, menu);
+	return true;
 }
 
 }

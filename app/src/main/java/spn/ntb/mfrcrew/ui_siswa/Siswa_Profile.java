@@ -8,16 +8,22 @@ import android.view.Menu;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+import com.makeramen.roundedimageview.RoundedImageView;
+
 import java.util.HashMap;
 
+import spn.ntb.mfrcrew.MainHome;
 import spn.ntb.mfrcrew.MainUbahPassword;
 import spn.ntb.mfrcrew.R;
-import spn.ntb.mfrcrew.Siswa_Detail_Profil;
+import spn.ntb.mfrcrew.Siswa_Ubah_Profil;
 import spn.ntb.mfrcrew.json.SessionManager;
 
 public class Siswa_Profile extends AppCompatActivity {
@@ -25,7 +31,9 @@ public class Siswa_Profile extends AppCompatActivity {
 Animation animAlpha;
 SessionManager sessionManager;
 
-TextView txt_nama, txt_hp, txt_email;
+TextView txt_nama, ld_hambar;
+
+RoundedImageView fotoprof;
 
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +45,23 @@ protected void onCreate(Bundle savedInstanceState) {
 	
 	//=============================== Tangkap Hasil SESSION ===================================//
 	txt_nama = findViewById(R.id.prof_nama);
-	txt_hp = findViewById(R.id.prof_hp);
-	txt_email = findViewById(R.id.prof_email);
+	ld_hambar = findViewById(R.id.ld_hambar);
 	HashMap<String, String> id_user = sessionManager.getUserDetails();
 	String namax = id_user.get(SessionManager.nm_user);
-	String hpx = id_user.get(SessionManager.hp_user);
-	String emailx = id_user.get(SessionManager.email_user);
+	String fotox = id_user.get(SessionManager.foto_user);
 	txt_nama.setText(Html.fromHtml("<b>" + namax + "</b>"));
-	txt_hp.setText(Html.fromHtml("<b>" + hpx + "</b>"));
-	txt_email.setText(Html.fromHtml("<b>" + emailx + "</b>"));
+	ld_hambar.setText(Html.fromHtml("<b>" + fotox + "</b>"));
 	//=============================== End Tangkap Hasil SESSION ===================================//
+	
+	fotoprof = findViewById(R.id.fotoprof);
+	
+	Glide.with(getApplicationContext())
+			  .load("http://spn.ntb.polri.go.id/admin/service_android/images/profile/"+ld_hambar.getText().toString())
+			  .placeholder(R.drawable.placeholder)
+			  .error(R.drawable.placeholder)
+			  .fitCenter()
+			  .into(fotoprof);
+	
 }
 
 public void tulak(View view) {
@@ -87,40 +102,9 @@ private void showDialog(){
 
 public void btn_edit(View view) {
 	view.startAnimation(animAlpha);
-	Intent i = new Intent(getApplicationContext(), Siswa_Detail_Profil.class);
+	Intent i = new Intent(getApplicationContext(), Siswa_Ubah_Profil.class);
 	finish();
 	startActivity(i);
-}
-
-public void beri_ratting(View view) {
-	view.startAnimation(animAlpha);
-	/*Intent intent = new Intent();
-	intent.setAction(Intent.ACTION_VIEW);
-	intent.addCategory(Intent.CATEGORY_BROWSABLE);
-	intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=samsat.school.bappenda"));
-	startActivity(intent);*/
-}
-
-public void btn_web(View view) {
-	view.startAnimation(animAlpha);
-	//Intent i = new Intent(getApplicationContext(), MainPrivacyPolice.class);
-	//startActivity(i);
-}
-
-public void btn_ganti_pass(View view) {
-	view.startAnimation(animAlpha);
-	Intent i = new Intent(getApplicationContext(), MainUbahPassword.class);
-	finish();
-	startActivity(i);
-}
-
-public void apk_lainnya(View view) {
-	view.startAnimation(animAlpha);
-	/*Intent intent = new Intent();
-	intent.setAction(Intent.ACTION_VIEW);
-	intent.addCategory(Intent.CATEGORY_BROWSABLE);
-	intent.setData(Uri.parse("https://play.google.com/store/apps/developer?id=Bappenda+Provinsi+NTB"));
-	startActivity(intent);*/
 }
 
 public void btn_home(View view) {
@@ -140,4 +124,15 @@ public void onBackPressed() {
 	return true;
 }
 
+public void btn_update_data(View view) {
+	view.startAnimation(animAlpha);
+	Intent i = new Intent(getApplicationContext(), MainUbahPassword.class);
+	finish();
+	startActivity(i);
+}
+
+public void btn_web(View view) {
+	view.startAnimation(animAlpha);
+	Toast.makeText(getApplicationContext(), "FItur Belum Tersedia", Toast.LENGTH_SHORT).show();
+}
 }

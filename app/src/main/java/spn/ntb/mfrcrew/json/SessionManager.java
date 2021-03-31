@@ -25,6 +25,7 @@ public class SessionManager {
     public static final String email_user = "email_user";
     public static final String alamat_user = "alamat_user";
     public static final String akses_user = "akses_user";
+    public static final String foto_user = "foto_user";
     
     public SessionManager(Context context) {
         this.context = context;
@@ -68,6 +69,12 @@ public class SessionManager {
         editor.commit();
     }
     
+    public void createSession7(String foto){
+        editor.putBoolean(is_login, true);
+        editor.putString(foto_user, foto);
+        editor.commit();
+    }
+    
     public void checkLogin(){
         if (!this.is_login()){
             Intent i = new Intent(context, MainHome.class);
@@ -105,7 +112,7 @@ public class SessionManager {
         user.put(email_user, pref.getString(email_user, null));
         user.put(alamat_user, pref.getString(alamat_user, null));
         user.put(akses_user, pref.getString(akses_user, null));
+        user.put(foto_user, pref.getString(foto_user, null));
         return user;
     }
-    
 }

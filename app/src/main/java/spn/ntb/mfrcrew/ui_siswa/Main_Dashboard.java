@@ -22,6 +22,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+import com.makeramen.roundedimageview.RoundedImageView;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
@@ -34,11 +37,13 @@ import java.util.HashMap;
 import java.util.List;
 
 import spn.ntb.mfrcrew.EmptyState;
+import spn.ntb.mfrcrew.MainAksesMateri;
 import spn.ntb.mfrcrew.MainGaleri;
 import spn.ntb.mfrcrew.MainJadwal;
 import spn.ntb.mfrcrew.MainProfil;
 import spn.ntb.mfrcrew.MainSejarah;
 import spn.ntb.mfrcrew.MainPreUjian;
+import spn.ntb.mfrcrew.MainSiswaLibrary2;
 import spn.ntb.mfrcrew.MainStandar;
 import spn.ntb.mfrcrew.MainVisi;
 import spn.ntb.mfrcrew.R;
@@ -50,7 +55,7 @@ public class Main_Dashboard extends AppCompatActivity {
 	Animation animAlpha;
 	SessionManager session;
 
-	TextView txt_user, txt_akses, txt_hari;
+	TextView txt_user, txt_akses, txt_hari, ld_hambar;
 
 	//============ DIALOG ================//
 		AlertDialog.Builder dialog;
@@ -69,6 +74,8 @@ public class Main_Dashboard extends AppCompatActivity {
 	LinearLayout lin_ujian, lin_ujian2;
 	String Tahun, Bulan, Hari;
 	
+	RoundedImageView fotoprof;
+	
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
@@ -81,12 +88,15 @@ protected void onCreate(Bundle savedInstanceState) {
 	lin_ujian = findViewById(R.id.lin_ujian);
 	lin_ujian2 = findViewById(R.id.lin_ujian2);
 	txt_hari = findViewById(R.id.txt_hari);
+	ld_hambar = findViewById(R.id.ld_hambar);
 	//=============================== Tangkap Hasil SESSION ===================================//
 		HashMap<String, String> id_user = session.getUserDetails();
 		String namax = id_user.get(SessionManager.nm_user);
 		String aksesx = id_user.get(SessionManager.akses_user);
+		String fotox = id_user.get(SessionManager.foto_user);
 		txt_user.setText(Html.fromHtml("<b>" + namax + "</b>"));
 		txt_akses.setText(Html.fromHtml("<b>" + aksesx + "</b>"));
+		ld_hambar.setText(Html.fromHtml("<b>" + fotox + "</b>"));
 	//=============================== End Tangkap Hasil SESSION ===================================//
 	
 	Calendar now =  Calendar.getInstance();
@@ -111,6 +121,14 @@ protected void onCreate(Bundle savedInstanceState) {
 		}
 	});
 	
+	fotoprof = findViewById(R.id.fotoprof);
+	
+	Glide.with(getApplicationContext())
+		.load("http://spn.ntb.polri.go.id/admin/service_android/images/profile/"+ld_hambar.getText().toString())
+		.placeholder(R.drawable.placeholder)
+		.error(R.drawable.placeholder)
+		.fitCenter()
+		.into(fotoprof);
 }
 
 private void DialogForm() {
@@ -244,7 +262,8 @@ public void btn_setting(View view) {
 
 public void btn_library(View view) {
 	view.startAnimation(animAlpha);
-	Intent i = new Intent(getApplicationContext(), SiswaLibrary.class);
+	//Intent i = new Intent(getApplicationContext(), SiswaLibrary.class);
+	Intent i = new Intent(getApplicationContext(), MainSiswaLibrary2.class);
 	finish();
 	startActivity(i);
 }

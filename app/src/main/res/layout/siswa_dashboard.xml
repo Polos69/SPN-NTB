@@ -86,11 +86,17 @@
                     </LinearLayout>
 
                     <com.makeramen.roundedimageview.RoundedImageView
-                        android:id="@+id/imageView8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/fotoprof"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:src="@mipmap/ic_launcher"
+                        app:riv_border_color="@color/white"
+                        app:riv_border_width="2dp"
+                        app:riv_corner_radius="100dp"
+                        android:scaleType="fitXY"
                         android:layout_marginRight="12dp"/>
+
+
 
 
                 </LinearLayout>
@@ -122,6 +128,13 @@
                 android:layout_marginRight="20dp"
                 android:elevation="5dp"
                 android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ld_hambar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text=""/>
 
                 <FrameLayout
                     android:layout_width="match_parent"

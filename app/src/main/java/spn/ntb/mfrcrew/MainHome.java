@@ -221,6 +221,7 @@ protected void onCreate(Bundle savedInstanceState) {
 public void onClick(View view) {
 	view.startAnimation(animAlpha);
 	Intent i = new Intent(getApplicationContext(), MainLogin.class);
+	finish();
 	startActivity(i);
 }
 

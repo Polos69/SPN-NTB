@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainSiswaLibrary2">
+
+    <LinearLayout
+        android:id="@+id/toph"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#f2f2f2"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:onClick="tulak"
+            android:src="@drawable/btn_back"
+            app:tint="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:text="E-Library"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="#000000"
+            android:textSize="10pt"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toph2"
+        android:layout_below="@+id/toph"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_below="@+id/top1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_marginRight="24.7dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16.7dp"
+            android:background="@drawable/shape_login"
+            android:backgroundTint="#e5e5e5"
+            android:paddingTop="8dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/txt_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="Search"
+                android:textColor="#000000"
+                android:textSize="16.7sp" />
+
+            <ImageView
+                android:id="@+id/user"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/indigo"
+                android:src="@drawable/places_ic_search"
+                app:tint="@color/indigo" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/toph2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/list_galeri"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="185dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="2"
+            android:stretchMode="spacingWidth"
+            android:verticalSpacing="10dp"
+            android:dividerHeight="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

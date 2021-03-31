@@ -1,6 +1,7 @@
 package spn.ntb.mfrcrew;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,8 @@ import java.util.List;
 import javax.net.ssl.HttpsURLConnection;
 
 import spn.ntb.mfrcrew.json.JSONParser;
+import spn.ntb.mfrcrew.json.LazyLibrary2;
+import spn.ntb.mfrcrew.ui_siswa.Siswa_Profile;
 
 public class SiswaLibrary_Detail extends AppCompatActivity {
 
@@ -62,13 +65,9 @@ public class SiswaLibrary_Detail extends AppCompatActivity {
         new TampilPDF().execute();
     }
 
-    public void tulak(View view) {
-        view.startAnimation(animAlpha);
-        finish();
-    }
 
 
-    class TampilPDF extends AsyncTask<String, String, String> {
+class TampilPDF extends AsyncTask<String, String, String> {
        @Override
         protected void onPreExecute(){
             super.onPreExecute();
@@ -146,5 +145,13 @@ public class SiswaLibrary_Detail extends AppCompatActivity {
             pdfView.fromStream(inputStream).load();
         }
     }
+
+public void onBackPressed() {
+    finish();
+}
+
+public void cccsdf(View view) {
+    finish();
+}
     
 }

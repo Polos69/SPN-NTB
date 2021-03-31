@@ -34,7 +34,7 @@ public class MainStandar extends AppCompatActivity {
         animAlpha = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_hilang);
     
         pdfView = findViewById(R.id.pdfView);
-        new RetrivePDFfromUrl().execute("http://spn.ntb.polri.go.id/admin/service_android/file/8_standar_pendidikan.pdf");
+        new RetrivePDFfromUrl().execute("https://spn.ntb.polri.go.id/admin/service_android/file/standar_pendidikan.pdf");
     }
 
     public void tulak(View view) {

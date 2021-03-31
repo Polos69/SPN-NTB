@@ -3,6 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="spn.ntb.mfrcrew">
 
+    <uses-sdk tools:overrideLibrary="android.support.v14.leanback, android.support.v15.leanback, android.support.v16.leanback, android.support.v17.leanback, android.support.v18.leanback, android.support.v19.leanback, android.support.v20.leanback" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
         android:name=".app.AppController"
         android:allowBackup="true"
@@ -15,16 +24,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
+        android:value="@integer/google_play_services_version"
         tools:node="replace">
-        <activity android:name=".Siswa_Ubah_Profil">
-        </activity>
-        <activity android:name=".Siswa_Detail_Profil"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        </activity>
-        <activity android:name=".MainNotifikasi"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        </activity>
-        <activity android:name=".MainUbahPassword" />
+
+        <activity
+            android:name=".MainSiswaLibrary2"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".Siswa_Ubah_Profil"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MainUbahPassword"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainAksesMateri"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -116,13 +127,5 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>
