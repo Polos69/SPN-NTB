@@ -76,22 +76,12 @@
         <activity
             android:name=".MainGaleri"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <!--
-<activity
-            android:name=".MainInfoSPN"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        -->
         <activity
             android:name=".ui_siswa.Siswa_List_ujian"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui_siswa.SiswaLibrary"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <!--
-<activity
-            android:name=".ui_siswa.Main_ItemBawah"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        -->
         <activity
             android:name=".ui_siswa.Main_Dashboard"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
