@@ -32,7 +32,7 @@ import spn.ntb.mfrcrew.array_adapterlist.AdapterList;
 
 public class SiswaLibrary extends AppCompatActivity {
 
-Animation animAlpha;
+	Animation animAlpha;
 	private RecyclerView rc_recently, rc_kategori;
 	
 	private RequestQueue requestQueue;

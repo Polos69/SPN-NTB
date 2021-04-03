@@ -426,43 +426,41 @@ private View.OnClickListener klikSelesai = new View.OnClickListener() {
                 jumlahJawabanYgBenar++;
             }
         }
-    
-        Intent i = new Intent(getApplicationContext(), MainPreUjianHasil.class);
-        i.putExtra("score", ""+(jumlahJawabanYgBenar * 2));
-        i.putExtra("benar", ""+jumlahJawabanYgBenar);
-        i.putExtra("salah", ""+(50 - jumlahJawabanYgBenar));
         
-        i.putExtra("p_kd_soal", kd_soal.getText().toString());
-        i.putExtra("p_mapel", p_mapel.getText().toString());
-        i.putExtra("p_tgl", p_tgl.getText().toString());
-        i.putExtra("p_pengampu", p_pengampu.getText().toString());
-        
-        mCountDownTimer.cancel();
-        finish();
-        startActivity(i);
-        
-        /*AlertDialog tampilKotakAlert;
+        AlertDialog tampilKotakAlert;
         tampilKotakAlert = new AlertDialog.Builder(MainPreUjianLanjutan.this).create();
-        tampilKotakAlert.setTitle("HASIL UJIAN");
-        tampilKotakAlert.setIcon(R.drawable.ic_launcher_background);
-        tampilKotakAlert.setCancelable(false);
-        tampilKotakAlert.setMessage("Score " + jumlahJawabanYgBenar * 2);
-        tampilKotakAlert.setButton(AlertDialog.BUTTON_POSITIVE, "Priksa", new DialogInterface.OnClickListener() {
+        tampilKotakAlert.setTitle("SPN POLDA NTB");
+        tampilKotakAlert.setIcon(R.drawable.logo_app);
+        tampilKotakAlert.setCancelable(true);
+        tampilKotakAlert.setMessage("Apakah anda yakin ingin mengakhiri ujian ini?");
+        tampilKotakAlert.setButton(AlertDialog.BUTTON_POSITIVE, "YA", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                mCountDownTimer.cancel();
-                cekPertanyaan = true;
-                urutanPertanyaan = 0;
-                tunjukanPertanyaan(0, cekPertanyaan);
-            }
-        });
-        tampilKotakAlert.setButton(AlertDialog.BUTTON_NEGATIVE, "Keluar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                mCountDownTimer.cancel();
-                cekPertanyaan = false;
                 finish();
+                aturJawaban_nya();
+                // hitung berapa yg benar
+                int jumlahJawabanYgBenar = 0;
+                for (int i = 0; i < jawabanYgBenar.length; i++) {
+                    if ((jawabanYgBenar[i] != -1) && (jawabanYgBenar[i] == jawabanYgDiPilih[i])) {
+                        jumlahJawabanYgBenar++;
+                    }
+                }
+                Intent i = new Intent(getApplicationContext(), MainPreUjianHasil.class);
+                i.putExtra("score", ""+(jumlahJawabanYgBenar * 2));
+                i.putExtra("benar", ""+jumlahJawabanYgBenar);
+                i.putExtra("salah", ""+(50 - jumlahJawabanYgBenar));
+                i.putExtra("p_kd_soal", kd_soal.getText().toString());
+                i.putExtra("p_mapel", p_mapel.getText().toString());
+                i.putExtra("p_tgl", p_tgl.getText().toString());
+                i.putExtra("p_pengampu", p_pengampu.getText().toString());
+                mCountDownTimer.cancel();
+                startActivity(i);
             }
         });
-        tampilKotakAlert.show();*/
+        tampilKotakAlert.setButton(AlertDialog.BUTTON_NEGATIVE, "TIDAK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        tampilKotakAlert.show();
     }
 };
 
@@ -766,6 +764,8 @@ private View.OnClickListener btn_no1 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no2 = new View.OnClickListener() {
@@ -776,6 +776,8 @@ private View.OnClickListener btn_no2 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no3 = new View.OnClickListener() {
@@ -786,6 +788,8 @@ private View.OnClickListener btn_no3 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no4 = new View.OnClickListener() {
@@ -796,6 +800,8 @@ private View.OnClickListener btn_no4 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no5 = new View.OnClickListener() {
@@ -806,6 +812,8 @@ private View.OnClickListener btn_no5 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no6 = new View.OnClickListener() {
@@ -816,6 +824,8 @@ private View.OnClickListener btn_no6 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no7 = new View.OnClickListener() {
@@ -826,6 +836,8 @@ private View.OnClickListener btn_no7 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no8 = new View.OnClickListener() {
@@ -836,6 +848,8 @@ private View.OnClickListener btn_no8 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no9 = new View.OnClickListener() {
@@ -846,6 +860,8 @@ private View.OnClickListener btn_no9 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no10 = new View.OnClickListener() {
@@ -856,6 +872,8 @@ private View.OnClickListener btn_no10 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no11 = new View.OnClickListener() {
@@ -866,6 +884,8 @@ private View.OnClickListener btn_no11 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no12 = new View.OnClickListener() {
@@ -876,6 +896,8 @@ private View.OnClickListener btn_no12 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no13 = new View.OnClickListener() {
@@ -886,6 +908,8 @@ private View.OnClickListener btn_no13 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no14 = new View.OnClickListener() {
@@ -896,6 +920,8 @@ private View.OnClickListener btn_no14 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no15 = new View.OnClickListener() {
@@ -906,6 +932,8 @@ private View.OnClickListener btn_no15 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no16 = new View.OnClickListener() {
@@ -916,6 +944,8 @@ private View.OnClickListener btn_no16 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no17 = new View.OnClickListener() {
@@ -926,6 +956,8 @@ private View.OnClickListener btn_no17 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no18 = new View.OnClickListener() {
@@ -936,6 +968,8 @@ private View.OnClickListener btn_no18 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no19 = new View.OnClickListener() {
@@ -946,6 +980,8 @@ private View.OnClickListener btn_no19 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no20 = new View.OnClickListener() {
@@ -956,6 +992,8 @@ private View.OnClickListener btn_no20 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no21 = new View.OnClickListener() {
@@ -966,6 +1004,8 @@ private View.OnClickListener btn_no21 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no22 = new View.OnClickListener() {
@@ -976,6 +1016,8 @@ private View.OnClickListener btn_no22 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no23 = new View.OnClickListener() {
@@ -986,6 +1028,8 @@ private View.OnClickListener btn_no23 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no24 = new View.OnClickListener() {
@@ -996,6 +1040,8 @@ private View.OnClickListener btn_no24 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no25 = new View.OnClickListener() {
@@ -1006,6 +1052,8 @@ private View.OnClickListener btn_no25 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no26 = new View.OnClickListener() {
@@ -1016,6 +1064,8 @@ private View.OnClickListener btn_no26 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no27 = new View.OnClickListener() {
@@ -1026,6 +1076,8 @@ private View.OnClickListener btn_no27 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no28 = new View.OnClickListener() {
@@ -1036,6 +1088,8 @@ private View.OnClickListener btn_no28 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no29 = new View.OnClickListener() {
@@ -1046,6 +1100,8 @@ private View.OnClickListener btn_no29 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no30 = new View.OnClickListener() {
@@ -1056,6 +1112,8 @@ private View.OnClickListener btn_no30 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no31 = new View.OnClickListener() {
@@ -1066,6 +1124,8 @@ private View.OnClickListener btn_no31 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no32 = new View.OnClickListener() {
@@ -1076,6 +1136,8 @@ private View.OnClickListener btn_no32 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no33 = new View.OnClickListener() {
@@ -1086,6 +1148,8 @@ private View.OnClickListener btn_no33 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no34 = new View.OnClickListener() {
@@ -1096,6 +1160,8 @@ private View.OnClickListener btn_no34 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no35 = new View.OnClickListener() {
@@ -1106,6 +1172,8 @@ private View.OnClickListener btn_no35 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no36 = new View.OnClickListener() {
@@ -1116,6 +1184,8 @@ private View.OnClickListener btn_no36 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no37 = new View.OnClickListener() {
@@ -1126,6 +1196,8 @@ private View.OnClickListener btn_no37 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no38 = new View.OnClickListener() {
@@ -1136,6 +1208,8 @@ private View.OnClickListener btn_no38 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no39 = new View.OnClickListener() {
@@ -1146,6 +1220,8 @@ private View.OnClickListener btn_no39 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no40 = new View.OnClickListener() {
@@ -1156,6 +1232,8 @@ private View.OnClickListener btn_no40 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no41 = new View.OnClickListener() {
@@ -1166,6 +1244,8 @@ private View.OnClickListener btn_no41 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no42 = new View.OnClickListener() {
@@ -1176,6 +1256,8 @@ private View.OnClickListener btn_no42 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no43 = new View.OnClickListener() {
@@ -1186,6 +1268,8 @@ private View.OnClickListener btn_no43 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no44 = new View.OnClickListener() {
@@ -1196,6 +1280,8 @@ private View.OnClickListener btn_no44 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no45 = new View.OnClickListener() {
@@ -1206,6 +1292,8 @@ private View.OnClickListener btn_no45 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no46 = new View.OnClickListener() {
@@ -1216,6 +1304,8 @@ private View.OnClickListener btn_no46 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no47 = new View.OnClickListener() {
@@ -1226,6 +1316,8 @@ private View.OnClickListener btn_no47 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no48 = new View.OnClickListener() {
@@ -1236,6 +1328,8 @@ private View.OnClickListener btn_no48 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no49 = new View.OnClickListener() {
@@ -1246,6 +1340,8 @@ private View.OnClickListener btn_no49 = new View.OnClickListener() {
             urutanPertanyaan = listSoal.size() - 1;
         }
         tunjukanPertanyaan(urutanPertanyaan, cekPertanyaan);
+        btnSelesai.setVisibility(View.GONE);
+        btnNext.setVisibility(View.VISIBLE);
     }
 };
 private View.OnClickListener btn_no50 = new View.OnClickListener() {
