@@ -51,6 +51,22 @@
       "filters": [
         {
           "filterType": "ABI",
+          "value": "x86_64"
+        },
+        {
+          "filterType": "DENSITY",
+          "value": "xxxhdpi"
+        }
+      ],
+      "versionCode": 1,
+      "versionName": "1.0",
+      "outputFile": "app-xxxhdpiX86_64-release.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
           "value": "armeabi-v7a"
         },
         {
@@ -67,7 +83,7 @@
       "filters": [
         {
           "filterType": "ABI",
-          "value": "x86_64"
+          "value": "armeabi"
         },
         {
           "filterType": "DENSITY",
@@ -76,7 +92,7 @@
       ],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "app-xxxhdpiX86_64-release.apk"
+      "outputFile": "app-xxxhdpiArmeabi-release.apk"
     },
     {
       "type": "ONE_OF_MANY",
@@ -100,15 +116,11 @@
         {
           "filterType": "ABI",
           "value": "armeabi"
-        },
-        {
-          "filterType": "DENSITY",
-          "value": "xxxhdpi"
         }
       ],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "app-xxxhdpiArmeabi-release.apk"
+      "outputFile": "app-armeabi-release.apk"
     },
     {
       "type": "ONE_OF_MANY",
@@ -121,54 +133,6 @@
       "versionCode": 1,
       "versionName": "1.0",
       "outputFile": "app-mips64-release.apk"
-    },
-    {
-      "type": "ONE_OF_MANY",
-      "filters": [
-        {
-          "filterType": "ABI",
-          "value": "x86_64"
-        }
-      ],
-      "versionCode": 1,
-      "versionName": "1.0",
-      "outputFile": "app-x86_64-release.apk"
-    },
-    {
-      "type": "ONE_OF_MANY",
-      "filters": [
-        {
-          "filterType": "ABI",
-          "value": "armeabi"
-        }
-      ],
-      "versionCode": 1,
-      "versionName": "1.0",
-      "outputFile": "app-armeabi-release.apk"
-    },
-    {
-      "type": "ONE_OF_MANY",
-      "filters": [
-        {
-          "filterType": "ABI",
-          "value": "armeabi-v7a"
-        }
-      ],
-      "versionCode": 1,
-      "versionName": "1.0",
-      "outputFile": "app-armeabi-v7a-release.apk"
-    },
-    {
-      "type": "ONE_OF_MANY",
-      "filters": [
-        {
-          "filterType": "ABI",
-          "value": "x86"
-        }
-      ],
-      "versionCode": 1,
-      "versionName": "1.0",
-      "outputFile": "app-x86-release.apk"
     },
     {
       "type": "ONE_OF_MANY",
@@ -188,15 +152,35 @@
         {
           "filterType": "ABI",
           "value": "x86"
-        },
-        {
-          "filterType": "DENSITY",
-          "value": "ldpi"
         }
       ],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "app-ldpiX86-release.apk"
+      "outputFile": "app-x86-release.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86_64"
+        }
+      ],
+      "versionCode": 1,
+      "versionName": "1.0",
+      "outputFile": "app-x86_64-release.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "armeabi-v7a"
+        }
+      ],
+      "versionCode": 1,
+      "versionName": "1.0",
+      "outputFile": "app-armeabi-v7a-release.apk"
     },
     {
       "type": "ONE_OF_MANY",
@@ -219,6 +203,22 @@
       "filters": [
         {
           "filterType": "ABI",
+          "value": "x86_64"
+        },
+        {
+          "filterType": "DENSITY",
+          "value": "ldpi"
+        }
+      ],
+      "versionCode": 1,
+      "versionName": "1.0",
+      "outputFile": "app-ldpiX86_64-release.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
           "value": "armeabi-v7a"
         },
         {
@@ -235,7 +235,7 @@
       "filters": [
         {
           "filterType": "ABI",
-          "value": "mips"
+          "value": "x86"
         },
         {
           "filterType": "DENSITY",
@@ -244,23 +244,7 @@
       ],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "app-ldpiMips-release.apk"
-    },
-    {
-      "type": "ONE_OF_MANY",
-      "filters": [
-        {
-          "filterType": "ABI",
-          "value": "x86_64"
-        },
-        {
-          "filterType": "DENSITY",
-          "value": "ldpi"
-        }
-      ],
-      "versionCode": 1,
-      "versionName": "1.0",
-      "outputFile": "app-ldpiX86_64-release.apk"
+      "outputFile": "app-ldpiX86-release.apk"
     },
     {
       "type": "ONE_OF_MANY",
@@ -283,32 +267,16 @@
       "filters": [
         {
           "filterType": "ABI",
-          "value": "armeabi-v7a"
+          "value": "mips"
         },
         {
           "filterType": "DENSITY",
-          "value": "xxhdpi"
+          "value": "ldpi"
         }
       ],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "app-xxhdpiArmeabi-v7a-release.apk"
-    },
-    {
-      "type": "ONE_OF_MANY",
-      "filters": [
-        {
-          "filterType": "ABI",
-          "value": "mips64"
-        },
-        {
-          "filterType": "DENSITY",
-          "value": "xxhdpi"
-        }
-      ],
-      "versionCode": 1,
-      "versionName": "1.0",
-      "outputFile": "app-xxhdpiMips64-release.apk"
+      "outputFile": "app-ldpiMips-release.apk"
     },
     {
       "type": "ONE_OF_MANY",
@@ -331,7 +299,7 @@
       "filters": [
         {
           "filterType": "ABI",
-          "value": "armeabi"
+          "value": "mips"
         },
         {
           "filterType": "DENSITY",
@@ -340,7 +308,7 @@
       ],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "app-xxhdpiArmeabi-release.apk"
+      "outputFile": "app-xxhdpiMips-release.apk"
     },
     {
       "type": "ONE_OF_MANY",
@@ -363,7 +331,7 @@
       "filters": [
         {
           "filterType": "ABI",
-          "value": "mips"
+          "value": "armeabi"
         },
         {
           "filterType": "DENSITY",
@@ -372,7 +340,39 @@
       ],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "app-xxhdpiMips-release.apk"
+      "outputFile": "app-xxhdpiArmeabi-release.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "mips64"
+        },
+        {
+          "filterType": "DENSITY",
+          "value": "xxhdpi"
+        }
+      ],
+      "versionCode": 1,
+      "versionName": "1.0",
+      "outputFile": "app-xxhdpiMips64-release.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "armeabi-v7a"
+        },
+        {
+          "filterType": "DENSITY",
+          "value": "xxhdpi"
+        }
+      ],
+      "versionCode": 1,
+      "versionName": "1.0",
+      "outputFile": "app-xxhdpiArmeabi-v7a-release.apk"
     }
   ]
 }

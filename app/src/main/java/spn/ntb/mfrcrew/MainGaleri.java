@@ -32,6 +32,7 @@ public class MainGaleri extends AppCompatActivity {
 	JSONParser jParser = new JSONParser();
 	ArrayList<HashMap<String, String>> DaftarElektronik = new ArrayList<HashMap<String, String>>();
 	private static String url_galeri = "https://spn.ntb.polri.go.id/admin/service_android/galeri.php";
+	public static final String TAG_JUDUL = "judul";
 	public static final String TAG_GAMBAR = "gambar_nama";
 	
 	JSONArray string_json = null;
@@ -80,10 +81,12 @@ class AmbilData extends AsyncTask<String, String, String> {
 			for (int i = 0; i < string_json.length(); i++) {
 				JSONObject c = string_json.getJSONObject(i);
 				
+				String jdul_d =  c.getString(TAG_JUDUL);
 				String link_image =  c.getString(TAG_GAMBAR);
 				
 				HashMap<String, String> map = new HashMap<String, String>();
 				
+				map.put(TAG_JUDUL, jdul_d);
 				map.put(TAG_GAMBAR, link_image);
 				
 				DaftarElektronik.add(map);
