@@ -34,7 +34,6 @@ public class MainGaleri extends AppCompatActivity {
 	private static String url_galeri = "https://spn.ntb.polri.go.id/admin/service_android/galeri.php";
 	public static final String TAG_JUDUL = "judul";
 	public static final String TAG_GAMBAR = "gambar_nama";
-	
 	JSONArray string_json = null;
 	GridView list;
 	LazyGaleri adapter;
