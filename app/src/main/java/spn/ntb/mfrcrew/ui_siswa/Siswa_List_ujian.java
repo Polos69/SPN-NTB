@@ -113,7 +113,6 @@ class ListUjian extends AsyncTask<String, String, String> {
 						public void run() {
 							info_ujian.setVisibility(View.VISIBLE);
 							list.setVisibility(View.GONE);
-							
 						}
 					});
 				}else{

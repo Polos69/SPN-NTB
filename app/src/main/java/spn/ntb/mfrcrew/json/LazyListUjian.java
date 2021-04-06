@@ -80,8 +80,6 @@ public View getView(int position, View convertView, ViewGroup parent) {
 	mm_mulai.setText(daftar_elektronik.get(Siswa_List_ujian.MM_MULAI));
 	mm_akhir.setText(daftar_elektronik.get(Siswa_List_ujian.MM_AKHIR));
 	
-	
-	
 	btn_mulai.setOnClickListener(new View.OnClickListener() {
 		@Override
 		public void onClick(View v) {
@@ -89,7 +87,7 @@ public View getView(int position, View convertView, ViewGroup parent) {
 			Calendar now =  Calendar.getInstance();
 			int Y1 = now.get(Calendar.YEAR);
 			int m1 = now.get(Calendar.MONTH) + 1;
-			int d1 = now.get(Calendar.DAY_OF_MONTH);
+			int d1 = now.get(Calendar.DAY_OF_MONTH) + 1;
 			int j1 = now.get(Calendar.HOUR_OF_DAY);
 			int mm1 = now.get(Calendar.MINUTE);
 			Tahun = String.valueOf(Y1);

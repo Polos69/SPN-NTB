@@ -8,7 +8,7 @@ android {
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "spn.ntb.mfrcrew"
-        minSdkVersion 16
+        minSdkVersion 14
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -80,7 +80,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'com.github.nostra13:Android-Universal-Image-Loader:f6a9615868482672c3630cb7db6dcf43391e80de'
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
     //View Pager2
     implementation 'androidx.viewpager2:viewpager2:1.0.0'

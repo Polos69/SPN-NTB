@@ -123,7 +123,17 @@ protected void onCreate(Bundle savedInstanceState) {
 	}else{
 		Bulan = String.valueOf(m1);
 	}
-	Hari = String.valueOf(d1);
+	
+	if (d1 <= 9){
+		Hari = "0"+String.valueOf(d1);
+	}else{
+		Hari = String.valueOf(d1);
+	}
+	
+	
+	
+	
+	
 	tanggal.setText(Hari+'-'+Bulan+'-'+Tahun);
 	
 	
