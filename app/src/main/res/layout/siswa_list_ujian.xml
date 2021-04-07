@@ -59,7 +59,7 @@
             android:paddingRight="20dp"
             android:layout_gravity="center"
             android:visibility="gone"
-            app:srcCompat="@drawable/info_ujian" />
+            android:src="@drawable/info_ujian" />
 
         <ListView
             android:id="@+id/list"

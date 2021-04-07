@@ -248,7 +248,7 @@
                     android:layout_width="40dp"
                     android:layout_height="25dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/home_outline" />
+                    android:src="@drawable/home_outline" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -278,7 +278,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:padding="2dp"
-                    app:srcCompat="@drawable/sett_outline" />
+                    android:src="@drawable/sett_outline" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -308,7 +308,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/notif_impor_out" />
+                    android:src="@drawable/notif_impor_out" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

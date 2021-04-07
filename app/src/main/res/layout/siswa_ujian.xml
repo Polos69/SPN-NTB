@@ -586,7 +586,7 @@
                         android:scaleType="fitXY"
                         android:visibility="gone"
                         android:layout_gravity="center"
-                        app:srcCompat="@drawable/placeholder" />
+                        android:src="@drawable/placeholder" />
 
                     <TextView
                         android:id="@+id/textViewSoal"

@@ -15,7 +15,7 @@
             android:id="@+id/img_pop_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/placeholder" />
+            android:src="@drawable/placeholder" />
 
         <TextView
             android:id="@+id/txt_pop_up"

@@ -575,7 +575,7 @@
                     android:id="@+id/gambar_ujian"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/placeholder" />
+                    android:src="@drawable/placeholder" />
 
             <TextView
                 android:id="@+id/textViewSoal"

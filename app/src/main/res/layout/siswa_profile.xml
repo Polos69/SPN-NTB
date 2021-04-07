@@ -124,7 +124,7 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_gravity="left"
-                        app:srcCompat="@drawable/personal_info_ico" />
+                        android:src="@drawable/personal_info_ico" />
 
                     <TextView
                         android:id="@+id/textView2"
@@ -138,7 +138,7 @@
                         android:id="@+id/imageView3"
                         android:layout_width="20dp"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/prof_next" />
+                        android:src="@drawable/prof_next" />
                 </LinearLayout>
 
                 <View
@@ -159,7 +159,7 @@
                         android:id="@+id/imageView4"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        app:srcCompat="@drawable/pass_ico"
+                        android:src="@drawable/pass_ico"
                         android:layout_gravity="left" />
 
                     <TextView
@@ -174,7 +174,7 @@
                         android:id="@+id/imageView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/prof_next" />
+                        android:src="@drawable/prof_next" />
                 </LinearLayout>
 
                 <View
@@ -203,7 +203,7 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_gravity="left"
-                        app:srcCompat="@drawable/prof_globe"
+                        android:src="@drawable/prof_globe"
                         app:tint="@color/background" />
 
                     <TextView
@@ -216,7 +216,7 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/prof_next" />
+                        android:src="@drawable/prof_next" />
                 </LinearLayout>
 
                 <View

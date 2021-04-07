@@ -56,8 +56,6 @@ import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 import spn.ntb.mfrcrew.app.AppController;
 import spn.ntb.mfrcrew.json.JSONParser;
-import spn.ntb.mfrcrew.json.SessionManager;
-import spn.ntb.mfrcrew.ui_siswa.Main_Dashboard;
 
 public class MainHome extends AppCompatActivity implements OnMapReadyCallback {
 
